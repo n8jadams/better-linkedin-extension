@@ -1,0 +1,25 @@
+{
+  "name": "Better LinkedIn Extension",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Removes the stuff I don't like from LinkedIn",
+  "web_accessible_resources" : [
+    "hideElements.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://linkedin.com/*",
+        "https://www.linkedin.com/*"
+      ],
+      "css" : [
+        "hideElements.css"
+      ],
+      "js": [
+        "execute.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}
